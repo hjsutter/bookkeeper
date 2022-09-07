@@ -17,10 +17,11 @@ let bookmakers = ['barstool', 'betus','betmgm', 'circasports', 'draftkings', 'fa
 export class NbaGamesComponent implements OnInit {
 
   oddsList: any[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
-    //Get the odds for each upcoming MLB game
+    //Get the odds for each upcoming NBA game
     // axios.get(`https://api.the-odds-api.com/v4/sports/${ sportKey }/odds/?apiKey=${ apiKey }&regions=${ regions }&markets=${ markets }&bookmakers=${ bookmakers }`)
     // .then(response => {
     //   console.log(response.data)
