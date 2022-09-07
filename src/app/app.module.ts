@@ -7,6 +7,7 @@ import { MlbGamesComponent } from './mlb-games/mlb-games.component';
 import { NbaGamesComponent } from './nba-games/nba-games.component';
 import { NflGamesComponent } from './nfl-games/nfl-games.component';
 import { NhlGamesComponent } from './nhl-games/nhl-games.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NhlGamesComponent } from './nhl-games/nhl-games.component';
     MlbGamesComponent,
     NbaGamesComponent,
     NflGamesComponent,
-    NhlGamesComponent
+    NhlGamesComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
