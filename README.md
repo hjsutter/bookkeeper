@@ -1,5 +1,9 @@
 # Bookkeeper
 
+## Description
+
+This project gives users a look upcoming games for all four major American sports, and lists the betting lines from various bookmakers around the country.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
 ## Development server
