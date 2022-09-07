@@ -18,6 +18,32 @@ let bookmakers = ['barstool', 'betus','betmgm', 'circasports', 'draftkings', 'fa
 export class MlbGamesComponent implements OnInit {
 
   oddsList: any[] = [];
+  testList = [
+    { home_team: 'Milwaukee Brewers', away_team: 'Colorado Rockies', commence_time: '09 September 2022'},
+    { home_team: 'Green Bay Packers', away_team: 'Minnesota Vikings', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Bucks', away_team: 'Chicago Bulls', commence_time: '09 September 2022'},
+    { home_team: 'Colorado Avalanche', away_team: 'Tampa Bay Lightning', commence_time: '09 September 2022'},
+    { home_team: 'Wisconsin Badgers', away_team: 'Ohio St Buckeyes', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Admirals', away_team: 'Chicago Wolves', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Brewers', away_team: 'Colorado Rockies', commence_time: '09 September 2022'},
+    { home_team: 'Green Bay Packers', away_team: 'Minnesota Vikings', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Bucks', away_team: 'Chicago Bulls', commence_time: '09 September 2022'},
+    { home_team: 'Colorado Avalanche', away_team: 'Tampa Bay Lightning', commence_time: '09 September 2022'},
+    { home_team: 'Wisconsin Badgers', away_team: 'Ohio St Buckeyes', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Admirals', away_team: 'Chicago Wolves', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Brewers', away_team: 'Colorado Rockies', commence_time: '09 September 2022'},
+    { home_team: 'Green Bay Packers', away_team: 'Minnesota Vikings', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Bucks', away_team: 'Chicago Bulls', commence_time: '09 September 2022'},
+    { home_team: 'Colorado Avalanche', away_team: 'Tampa Bay Lightning', commence_time: '09 September 2022'},
+    { home_team: 'Wisconsin Badgers', away_team: 'Ohio St Buckeyes', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Admirals', away_team: 'Chicago Wolves', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Brewers', away_team: 'Colorado Rockies', commence_time: '09 September 2022'},
+    { home_team: 'Green Bay Packers', away_team: 'Minnesota Vikings', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Bucks', away_team: 'Chicago Bulls', commence_time: '09 September 2022'},
+    { home_team: 'Colorado Avalanche', away_team: 'Tampa Bay Lightning', commence_time: '09 September 2022'},
+    { home_team: 'Wisconsin Badgers', away_team: 'Ohio St Buckeyes', commence_time: '09 September 2022'},
+    { home_team: 'Milwaukee Admirals', away_team: 'Chicago Wolves', commence_time: '09 September 2022'}
+  ]
   constructor() {
 
   }
@@ -45,7 +71,10 @@ export class MlbGamesComponent implements OnInit {
 
   viewDetails(index: any): void {
     console.log(index)
-    console.log(this.oddsList[index])
-
+    if(this.oddsList.length == 0){
+      console.log(this.testList[index])
+    } else {
+      console.log(this.oddsList[index])
+    }
   }
 }

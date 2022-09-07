@@ -2,52 +2,19 @@
   <h1>MLB Games</h1>
 </div>
 <!-- Test Cards -->
-    <div class="row card-deck">
-      <div class="col-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Away Team<br>vs.<br>Home Team</h5>
-            <p class="card-text" id="date">Day Mon Date Year</p>
-            <button class="btn btn-primary">View Odds</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Away Team<br>vs.<br>Home Team</h5>
-            <p class="card-text" id="date">Day Mon Date Year</p>
-            <button class="btn btn-primary">View Odds</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Away Team<br>vs.<br>Home Team</h5>
-            <p class="card-text" id="date">Day Mon Date Year</p>
-            <button class="btn btn-primary">View Odds</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Away Team<br>vs.<br>Home Team</h5>
-            <p class="card-text" id="date">Day Mon Date Year</p>
-            <button class="btn btn-primary">View Odds</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Away Team<br>vs.<br>Home Team</h5>
-            <p class="card-text" id="date">Day Mon Date Year</p>
-            <button class="btn btn-primary">View Odds</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Away Team<br>vs.<br>Home Team</h5>
-            <p class="card-text" id="date">Day Mon Date Year</p>
-            <button class="btn btn-primary">View Odds</button>
-          </div>
+<div class="container-fluid">
+  <div class="row card-group" style="display: flex;">
+    <div class="col-3 my-3" *ngFor=" let game of testList, let i = index">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{game.away_team}}<br>vs.<br>{{game.home_team}}</h5>
+          <p class="card-text" id="date">{{game.commence_time}}</p>
+          <a routerLink="/mlb" (click)="viewDetails(i)" class="stretched-link">View Odds</a>
         </div>
       </div>
     </div>
+  </div>
+</div>
 <!-- Auto-Generated Cards -->
 <!-- <div class="container">
   <div class="row card-deck my-5 align-items-center justify-content-center">
