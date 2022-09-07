@@ -1,0 +1,9 @@
+<div class="row card-group">
+  <div class="card" style="width: 18rem;" *ngFor=" let game of oddsList, let i = index">
+    <div class="card-body">
+      <h5 class="card-title">{{game.away_team}} vs. {{game.home_team}}</h5>
+      <p id="date">{{game.commence_time}}</p>
+      <button class="btn btn-primary" (click)="viewDetails(i)">View Odds</button>
+    </div>
+  </div>
+</div>
