@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
+import { OddsComponent } from '../odds/odds.component';
 
 let apiKey = '2a24d9b96c09d00f9b220a306b5d9f7a'
 let sportKey = 'baseball_mlb'
@@ -19,30 +20,16 @@ export class MlbGamesComponent implements OnInit {
 
   oddsList: any[] = [];
   testList = [
-    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022'},
-    { home_team: 'Green Bay Packers', away_team: 'Minnesota Vikings', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Bucks', away_team: 'Chicago Bulls', commence_time: '09 September 2022'},
-    { home_team: 'Colorado Avalanche', away_team: 'Tampa Bay Lightning', commence_time: '09 September 2022'},
-    { home_team: 'Wisconsin Badgers', away_team: 'Ohio St Buckeyes', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Admirals', away_team: 'Chicago Wolves', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Brewers', away_team: 'Colorado Rockies', commence_time: '09 September 2022'},
-    { home_team: 'Green Bay Packers', away_team: 'Minnesota Vikings', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Bucks', away_team: 'Chicago Bulls', commence_time: '09 September 2022'},
-    { home_team: 'Colorado Avalanche', away_team: 'Tampa Bay Lightning', commence_time: '09 September 2022'},
-    { home_team: 'Wisconsin Badgers', away_team: 'Ohio St Buckeyes', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Admirals', away_team: 'Chicago Wolves', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Brewers', away_team: 'Colorado Rockies', commence_time: '09 September 2022'},
-    { home_team: 'Green Bay Packers', away_team: 'Minnesota Vikings', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Bucks', away_team: 'Chicago Bulls', commence_time: '09 September 2022'},
-    { home_team: 'Colorado Avalanche', away_team: 'Tampa Bay Lightning', commence_time: '09 September 2022'},
-    { home_team: 'Wisconsin Badgers', away_team: 'Ohio St Buckeyes', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Admirals', away_team: 'Chicago Wolves', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Brewers', away_team: 'Colorado Rockies', commence_time: '09 September 2022'},
-    { home_team: 'Green Bay Packers', away_team: 'Minnesota Vikings', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Bucks', away_team: 'Chicago Bulls', commence_time: '09 September 2022'},
-    { home_team: 'Colorado Avalanche', away_team: 'Tampa Bay Lightning', commence_time: '09 September 2022'},
-    { home_team: 'Wisconsin Badgers', away_team: 'Ohio St Buckeyes', commence_time: '09 September 2022'},
-    { home_team: 'Milwaukee Admirals', away_team: 'Chicago Wolves', commence_time: '09 September 2022'}
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]},
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]},
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]},
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]},
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]},
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]},
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]},
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]},
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]},
+    { home_team: 'Milwaukee Brewers', away_team: 'St. Louis Cardinals', commence_time: '09 September 2022', bookmakers: [{title: 'FanDuel', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}, {title: 'BetMGM', markets: [{key: 'h2h', outcomes: [{name: 'Milwaukee Brewers', price: 4.2}, {name: 'St. Louis Cardinals', price: 1.5}]}]}]}
   ]
   constructor() {
 
@@ -69,7 +56,7 @@ export class MlbGamesComponent implements OnInit {
     })
   }
 
-  viewDetails(index: any): void {
+  viewOdds(index: number): void {
     console.log(index)
     if(this.oddsList.length == 0){
       console.log(this.testList[index])

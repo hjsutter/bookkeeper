@@ -4,21 +4,47 @@
 <!-- Test Cards -->
 <div class="container-fluid">
   <div class="row card-group" style="display: flex;">
-    <div class="col-3 my-3" *ngFor=" let game of oddsList, let i = index">
+    <div class="col-3 my-3" *ngFor=" let game of testList, let i = index">
       <div class="card">
         <div class="card-body text-center">
           <h5 class="card-title">
-            <img id="away-img" src='{{ "assets/mlb/" + game.away_team + ".png" }}'>{{game.away_team}}
+            <img id="away-img" src='{{ "assets/mlb/" + game.away_team + ".png" }}'>
+            {{game.away_team}}
             <br>vs.<br>
-            <img id="home-img" src='{{ "assets/mlb/" + game.home_team + ".png" }}'>{{game.home_team}}
+            <img id="home-img" src='{{ "assets/mlb/" + game.home_team + ".png" }}'>
+            {{game.home_team}}
           </h5>
           <h6 class="card-subtitle" id="date">{{game.commence_time}}</h6>
-          <a routerLink="/mlb" (click)="viewDetails(i)" class="stretched-link">View Odds</a>
-        </div>
+          <a (click)="viewOdds(i)" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">View Odds</a>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <table>
+                <th>Bookmaker</th>
+                <th>Team</th>
+                <th>Odds</th>
+                <!-- <div> -->
+                  <tr *ngFor="let bookmaker of game.bookmakers">
+                    <td id="bookmaker">{{ bookmaker.title }}</td>
+                    <div id="teamDiv" *ngFor="let team of bookmaker.markets[0].outcomes">
+                      <td class="data">{{ team.name }}</td>
+                      <td class="data">{{ team.price }}</td>
+                    </div>
+                  </tr>
+                  <!-- <tr>
+                    <td>{{ bookmaker.markets[0].outcomes[1].name }}</td>
+                    <td>{{ bookmaker.markets[0].outcomes[1].price }}</td>
+                  </tr> -->
+                <!-- </div> -->
+              </table>
+            </div>
+          </div>
+          <!-- <app-odds></app-odds> -->
+       </div>
       </div>
     </div>
   </div>
 </div>
+
 <!-- Auto-Generated Cards -->
 <!-- <div class="container">
   <div class="row card-deck my-5 align-items-center justify-content-center">
