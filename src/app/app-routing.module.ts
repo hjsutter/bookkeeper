@@ -5,13 +5,15 @@ import { MlbGamesComponent } from './mlb-games/mlb-games.component';
 import { NflGamesComponent } from './nfl-games/nfl-games.component';
 import { NhlGamesComponent } from './nhl-games/nhl-games.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { OddsComponent } from './odds/odds.component';
 
 const routes: Routes = [
   {path: 'home', component: HomepageComponent},
   {path: 'mlb', component: MlbGamesComponent},
   {path: 'nba', component: NbaGamesComponent},
   {path: 'nfl', component: NflGamesComponent},
-  {path: 'nhl', component: NhlGamesComponent}
+  {path: 'nhl', component: NhlGamesComponent},
+  {path: 'odds', component: OddsComponent}
 ];
 
 @NgModule({
