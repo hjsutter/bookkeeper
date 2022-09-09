@@ -15,30 +15,7 @@
             {{game.home_team}}
           </h5>
           <h6 class="card-subtitle" id="date">{{game.commence_time}}</h6>
-          <a (click)="viewOdds(i)" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">View Odds</a>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-              <table>
-                <th>Bookmaker</th>
-                <th>Team</th>
-                <th>Odds</th>
-                <!-- <div> -->
-                  <tr *ngFor="let bookmaker of game.bookmakers">
-                    <td id="bookmaker">{{ bookmaker.title }}</td>
-                    <div id="teamDiv" *ngFor="let team of bookmaker.markets[0].outcomes">
-                      <td class="data">{{ team.name }}</td>
-                      <td class="data">{{ team.price }}</td>
-                    </div>
-                  </tr>
-                  <!-- <tr>
-                    <td>{{ bookmaker.markets[0].outcomes[1].name }}</td>
-                    <td>{{ bookmaker.markets[0].outcomes[1].price }}</td>
-                  </tr> -->
-                <!-- </div> -->
-              </table>
-            </div>
-          </div>
-          <!-- <app-odds></app-odds> -->
+          <a class="btn btn-primary" (click)="viewOdds(i)">View Odds</a>
        </div>
       </div>
     </div>

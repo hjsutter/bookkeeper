@@ -13,7 +13,8 @@ const routes: Routes = [
   {path: 'nba', component: NbaGamesComponent},
   {path: 'nfl', component: NflGamesComponent},
   {path: 'nhl', component: NhlGamesComponent},
-  {path: 'odds', component: OddsComponent}
+  {path: 'odds', component: OddsComponent},
+  {path: '**', component: HomepageComponent}
 ];
 
 @NgModule({
