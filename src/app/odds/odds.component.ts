@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-odds',
@@ -13,7 +14,7 @@ export class OddsComponent implements OnInit {
   bookmakers: any[] = []
   outcomes: any[] = []
 
-  constructor() {
+  constructor(private location: Location) {
   }
 
   ngOnInit(): void {
@@ -28,5 +29,9 @@ export class OddsComponent implements OnInit {
     let time = new Date(game.commence_time)
     this.date = time.toDateString()
     this.bookmakers = game.bookmakers
+  }
+
+  goBack() {
+    this.location.back()
   }
 }
