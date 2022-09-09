@@ -1,3 +1,7 @@
-td, th {
-  border: solid 1px black;
+img{
+  max-width: 2em;
+}
+
+div.header {
+  padding: 1em;
 }
