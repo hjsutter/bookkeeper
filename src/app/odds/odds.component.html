@@ -1,10 +1,10 @@
 <div class="header">
   <button (click)="goBack()">X</button>
   <h5 class="text-center">
-    <img id="away-img" src='{{ "assets/mlb/" + awayTeam + ".png" }}'>
+    <img id="away-img" src='{{ "assets/" + league + "/" + awayTeam + ".png" }}'>
     {{awayTeam}}
     <br>vs.<br>
-    <img id="home-img" src='{{ "assets/mlb/" + homeTeam + ".png" }}'>
+    <img id="home-img" src='{{ "assets/" + league + "/" + homeTeam + ".png" }}'>
     {{homeTeam}}
     <br>
     <h6>{{ date }}</h6>

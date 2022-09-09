@@ -10,6 +10,7 @@ export class OddsComponent implements OnInit {
   oddsList: any[] = []
   homeTeam = '';
   awayTeam = '';
+  league = '';
   date: string = '';
   bookmakers: any[] = []
   outcomes: any[] = []
@@ -26,6 +27,8 @@ export class OddsComponent implements OnInit {
     let game = this.oddsList[0]
     this.homeTeam = game.home_team
     this.awayTeam = game.away_team
+    this.league = game.sport_key
+    console.log(this.league)
     let time = new Date(game.commence_time)
     this.date = time.toDateString()
     this.bookmakers = game.bookmakers
