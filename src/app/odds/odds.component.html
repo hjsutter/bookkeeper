@@ -1,1 +1,28 @@
+<div class="text-center">
+  <h5>{{ homeTeam }}</h5>
+  <br>vs.<br>
+  <h5>{{ awayTeam }}</h5>
+</div>
 
+<div class="table-responsive">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Bookmaker</th>
+        <th scope="col">Team</th>
+        <th scope="col">Odds</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bookmaker of bookmakers">
+          <td>{{ bookmaker.title }}</td>
+          <td>{{ bookmaker.markets[0].outcomes[0].name }}</td>
+          <td>{{ bookmaker.markets[0].outcomes[0].price }}</td>
+        </tr>
+        <tr *ngFor="let bookmaker of bookmakers">
+          <td>{{ bookmaker.markets[0].outcomes[1].name }}</td>
+          <td>{{ bookmaker.markets[0].outcomes[1].price }}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
