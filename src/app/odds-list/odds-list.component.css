@@ -1,0 +1,13 @@
+.header {
+    text-align: center;
+  }
+  
+  #home-img, #away-img{
+    max-width: 1.5em;
+    margin-right: 0.5em;
+  }
+  
+  a{
+    margin: 1em;
+  }
+  

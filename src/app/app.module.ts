@@ -9,6 +9,7 @@ import { NflGamesComponent } from './nfl-games/nfl-games.component';
 import { NhlGamesComponent } from './nhl-games/nhl-games.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { OddsComponent } from './odds/odds.component';
+import { OddsListComponent } from './odds-list/odds-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OddsComponent } from './odds/odds.component';
     NflGamesComponent,
     NhlGamesComponent,
     HomepageComponent,
-    OddsComponent
+    OddsComponent,
+    OddsListComponent
   ],
   imports: [
     BrowserModule,

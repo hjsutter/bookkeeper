@@ -6,6 +6,7 @@ import { NflGamesComponent } from './nfl-games/nfl-games.component';
 import { NhlGamesComponent } from './nhl-games/nhl-games.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { OddsComponent } from './odds/odds.component';
+import { OddsListComponent } from './odds-list/odds-list.component';
 
 const routes: Routes = [
   {path: 'home', component: HomepageComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'nfl', component: NflGamesComponent},
   {path: 'nhl', component: NhlGamesComponent},
   {path: 'odds', component: OddsComponent},
+  {path: 'odds-list', component: OddsListComponent},
   {path: '**', component: HomepageComponent}
 ];
 
