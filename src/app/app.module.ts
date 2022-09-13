@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { OddsComponent } from './odds/odds.component';
 import { OddsListComponent } from './odds-list/odds-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { OddsListComponent } from './odds-list/odds-list.component';
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     AppRoutingModule
   ],
   providers: [],
