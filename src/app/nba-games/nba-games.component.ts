@@ -26,12 +26,6 @@ export class NbaGamesComponent implements OnInit {
    .then(response => {
      console.log(response.data)
      this.oddsList = response.data
-     this.oddsList.sort()
-     let formattedDate = new Date();
-     for(let i = 0; i < this.oddsList.length; i++){
-       formattedDate = new Date(this.oddsList[i].commence_time);
-       this.oddsList[i].commence_time = formattedDate.toDateString()
-     }
      console.log('Remaining requests', response.headers['x-requests-remaining'])
      console.log('Used requests', response.headers['x-requests-used'])
    })

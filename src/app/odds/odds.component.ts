@@ -28,9 +28,7 @@ export class OddsComponent implements OnInit {
     this.homeTeam = game.home_team
     this.awayTeam = game.away_team
     this.league = game.sport_key
-    console.log(this.league)
-    let time = new Date(game.commence_time)
-    this.date = time.toDateString()
+    this.date = game.commence_time
     this.bookmakers = game.bookmakers
   }
 

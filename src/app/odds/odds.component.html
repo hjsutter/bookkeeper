@@ -7,7 +7,7 @@
     <img id="home-img" src='{{ "assets/" + league + "/" + homeTeam + ".png" }}'>
     {{homeTeam}}
     <br>
-    <h6>{{ date }}</h6>
+    <h6>{{ date | date:'fullDate' }}</h6>
   </h5>
 </div>
 

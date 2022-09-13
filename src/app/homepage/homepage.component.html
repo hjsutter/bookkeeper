@@ -4,9 +4,10 @@
   <hr class="my-4">
   <p>Click on a sport to view it's upcoming games and live odds</p>
   <div class="links">
-    <a class="btn btn-primary btn-lg" routerLink="/mlb" role="button">MLB</a>
-    <a class="btn btn-primary btn-lg" routerLink="/nba" role="button">NBA</a>
-    <a class="btn btn-primary btn-lg" routerLink="/nfl" role="button">NFL</a>
-    <a class="btn btn-primary btn-lg" routerLink="/nhl" role="button">NHL</a>
+    <a class="btn btn-primary btn-lg" routerLink="/" role="button" (click)="viewOddsList('mlb')">MLB</a>
+    <a class="btn btn-primary btn-lg" routerLink="/" role="button" (click)="viewOddsList('nba')">NBA</a>
+    <a class="btn btn-primary btn-lg" routerLink="/" role="button" (click)="viewOddsList('nfl')">NFL</a>
+    <a class="btn btn-primary btn-lg" routerLink="/" role="button" (click)="viewOddsList('nhl')">NHL</a>
   </div>
 </div>
+<app-odds-list [oddsList]="oddsList" [sportTitle]="sportTitle"></app-odds-list>
