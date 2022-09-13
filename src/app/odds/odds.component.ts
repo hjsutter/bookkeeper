@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-odds',
@@ -14,6 +15,8 @@ export class OddsComponent implements OnInit {
   date: string = '';
   bookmakers: any[] = []
   outcomes: any[] = []
+  faArrowLeft = faArrowLeft
+
 
   constructor(private location: Location) {
   }

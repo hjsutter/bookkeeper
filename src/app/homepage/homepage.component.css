@@ -1,8 +1,10 @@
-a {
+a.btn {
   margin-right: auto;
-  border: 1px solid black;
 }
 
-div.links {
-  border: 1px solid black;
+.divider{
+  width:5px;
+  height:auto;
+  display:inline-block;
 }
+

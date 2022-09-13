@@ -5,3 +5,7 @@ img{
 div.header {
   padding: 1em;
 }
+
+fa-icon.back-button:hover {
+  cursor: pointer;
+}

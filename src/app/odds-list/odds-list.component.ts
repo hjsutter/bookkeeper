@@ -10,6 +10,7 @@ export class OddsListComponent implements OnInit {
 
   @Input() oddsList: any[] = []
   @Input() sportTitle: string = ''
+  @Input() oddsRetrieved: boolean | undefined
   betLines: any = {};
 
   constructor(private router: Router) { }

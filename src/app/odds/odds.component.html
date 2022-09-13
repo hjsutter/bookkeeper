@@ -1,5 +1,7 @@
 <div class="header">
-  <button (click)="goBack()">X</button>
+  <div>
+    <fa-icon class="back-button" [icon]="faArrowLeft" (click)="goBack()"></fa-icon>
+  </div>
   <h5 class="text-center">
     <img id="away-img" src='{{ "assets/" + league + "/" + awayTeam + ".png" }}'>
     {{awayTeam}}

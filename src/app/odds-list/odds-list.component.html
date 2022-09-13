@@ -1,4 +1,4 @@
-<h1 class="header">{{ this.sportTitle }} Games</h1>
+<h1 class="header" *ngIf="oddsList.length >= 1">{{ this.sportTitle }} Games</h1>
   <div class="container-fluid">
     <div class="row card-group" style="display: flex;">
       <div class="col-3 my-3" *ngFor=" let game of oddsList, let i = index">
@@ -17,5 +17,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div *ngIf="oddsList.length == 0 && oddsRetrieved == true" class="text-center">
+    <h2>Uh Oh!</h2>
+    <h4>Looks like there aren't any upcoming {{ this.sportTitle }} games!</h4>
   </div>
   
