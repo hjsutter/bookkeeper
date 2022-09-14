@@ -1,8 +1,8 @@
 <h1 class="header" *ngIf="oddsList.length >= 1">{{ this.sportTitle }} Games</h1>
   <div class="container-fluid">
-    <div class="row card-group" style="display: flex;">
+    <div class="row row-cols-4 card-group" style="display: flex;">
       <div class="col-3 my-3" *ngFor=" let game of oddsList, let i = index">
-        <div class="card">
+        <div class="card h-100">
           <div class="card-body text-center">
             <h5 class="card-title">
               <img id="away-img" src='{{ "assets/" + game.sport_key + "/" + game.away_team + ".png" }}'>

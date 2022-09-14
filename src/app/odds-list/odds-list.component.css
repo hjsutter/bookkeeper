@@ -1,13 +1,17 @@
 .header {
-    text-align: center;
-  }
+  text-align: center;
+}
   
-  #home-img, #away-img{
-    max-width: 1.5em;
-    margin-right: 0.5em;
-  }
+#home-img, #away-img{
+  max-width: 1.5em;
+  margin-right: 0.5em;
+}
   
-  a{
-    margin: 1em;
-  }
+a{
+  margin: 1em;
+}
+
+div.card{
+  min-width: min-content;
+}
   
